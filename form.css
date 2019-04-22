@@ -40,7 +40,7 @@ body {
     border: 0.05rem #d1d1d1 solid;
     border-bottom: 0.5rem #d1d1d1 solid;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     height: 8rem;
     width: 10rem;
 }
@@ -58,10 +58,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 1rem;
 }
 .tick {
-    width: 33.333%;
-    text-align: center;
+    align-self: flex-end
 }
 .fa-check {
     padding-left: 1.5rem;
@@ -103,6 +103,7 @@ body {
 .form-input {
     border-color: #284a70;
     height: 1.7rem;
+    border-style: double;
 }
 .postal-input {
     width: 70%;
@@ -133,9 +134,54 @@ hr {
     display: flex;
     justify-content: space-between;
 }
+.label-wrapper-maison {
+    display: flex;
+}
+.form-input-maison {
+    width: 15%;
+    height: 1.6rem;
+    border-color: #284a70;
+    height: 1.7rem;
+    margin-bottom: 2rem;
+    border-style: double;
+}
+.form-label-maison {
+    width: 50%;
+}
+.m-square {
+    margin-left: 1rem
+}
+.maison-group-two {
+    margin-top: 6rem;
+}
+.appart-group-two {
+    margin-bottom: 2rem;
+}
+.fa-check{
+    margin-right: 0.8rem;
+}
+button.submit-btn {
+    color: white;
+    background: #284a70;
+    width: 7rem;
+    height: 2.5rem;
+    font-size: inherit;
+    border-style: unset;
+    border-radius: 0.3rem;
+}
 .display-hide {
     display: none
 }
 .display-show {
-    display: show
+    display: block
+}
+.visible-hide {
+    visibility: hidden;
+}
+.visible-show {
+    visibility: visible;
+}
+.active-border{
+    border: 0.05rem #284a70 solid;
+    border-bottom: 0.5rem #284a70 solid;
 }
