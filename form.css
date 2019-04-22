@@ -43,6 +43,7 @@ body {
     flex-direction: column;
     height: 8rem;
     width: 10rem;
+    cursor: pointer;
 }
 .icon-color, .icon-name {
     color: #b3b3b3;

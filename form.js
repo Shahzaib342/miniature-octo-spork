@@ -9,9 +9,10 @@ function myFunction(variab) {
   
   formsName.removeClass('display-show')
   activeMenue.removeClass('active-border')
+  $(".fa-check").css("visibility", "hidden")
   
   formsName.addClass('display-hide')
   $('#'+variab+'-form').addClass('display-show')
   $('#'+variab+'-menu').addClass('active-border')
-
+  $('#'+variab+'-tick').css("visibility", "visible")
 }
