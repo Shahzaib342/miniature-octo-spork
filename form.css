@@ -109,6 +109,9 @@ body {
 .postal-input {
     width: 70%;
 }
+.postal-input-tele {
+    width: 50%;
+}
 .adresse-input {
     width: 60%;
 }
@@ -161,7 +164,7 @@ hr {
 .fa-check{
     margin-right: 0.8rem;
 }
-button.submit-btn {
+input.submit-btn {
     color: white;
     background: #284a70;
     width: 7rem;
@@ -169,6 +172,7 @@ button.submit-btn {
     font-size: inherit;
     border-style: unset;
     border-radius: 0.3rem;
+    text-align: center
 }
 .display-hide {
     display: none

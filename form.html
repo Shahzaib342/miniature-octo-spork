@@ -66,6 +66,7 @@
                                 </div>
         
                             </div>
+                            <form method="POST" action="form_submit.php">
                         <!-- 0 level form  -->
                             <div class="form-container" id="home-form">
                                 <div class="form-wrapper">
@@ -97,7 +98,7 @@
                                                 <span class="back-arrow-text">Retuor</span>
                                             </div>
                                             <div class="submit-btn">
-                                                <button class="submit-btn">submit</button>
+                                                <input class="submit-btn" onclick="myFunction('maison')" value="submit">
                                             </div>
                                         </div>
                                     </div>
@@ -149,12 +150,12 @@
         <hr>
         <div class="form-footer-container">
             <div class="form-footer-wrapper">
-                <div class="router-wrapper">
+                <div class="router-wrapper" onclick="myFunction('home')">
                     <span class="back-arrow">a-</span>
                     <span class="back-arrow-text">Retuor</span>
                 </div>
                 <div class="submit-btn">
-                    <button class="submit-btn">submit</button>
+                    <input class="submit-btn" onclick="myFunction('appart')" value="submit">
                 </div>
             </div>
         </div>
@@ -204,11 +205,11 @@
             <div class="form-footer-container">
                 <div class="form-footer-wrapper">
                     <div class="router-wrapper">
-                        <span class="back-arrow">a-</span>
-                        <span class="back-arrow-text">Retuor</span>
+                        <span class="back-arrow"><i class="fas fa-arrow-alt-left"></i></span>
+                        <span class="back-arrow-text" onclick="myFunction('maison')">Retuor</span>
                     </div>
                     <div class="submit-btn">
-                        <button class="submit-btn">submit</button>
+                        <input class="submit-btn" onclick="myFunction('terrian')" value="submit">
                     </div>
                 </div>
             </div>
@@ -225,7 +226,7 @@
                     <div class="tetaran-group-one">
                         <div class="label-wrapper-maison">
                             <label class="form-label-maison">Surface totale du terain<sup>*</sup></label>
-                            <input class="form-input-maison" name="totale">
+                            <input class="form-input-maison" name="totale" >
                         </div>
                         <div class="label-wrapper-maison">
                             <label class="form-label-maison">Division parcellaire</label>
@@ -238,17 +239,64 @@
             <hr>
             <div class="form-footer-container">
                 <div class="form-footer-wrapper">
-                    <div class="router-wrapper">
-                        <span class="back-arrow">a-</span>
+                    <div class="router-wrapper" onclick="myFunction('appart')">
+                        <span class="back-arrow"></span>
                         <span class="back-arrow-text">Retuor</span>
                     </div>
                     <div class="submit-btn">
-                        <button class="submit-btn">submit</button>
+                        <input class="submit-btn" onclick="myFunction('last')">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- 4 level form  -->
+    <div class="form-container display-hide" id="last-form">
+            <div class="form-wrapper">
+                <div class="form-header-wrapper">
+                    <span>Votre demande d'estimation est prete!</span>
+                </div>
+                <div class="form-body-wrapper">
+                    <div class="postal-ville-wrapper">
+                        <div>
+                            <label class="form-label-maison">Nom</label>
+                            <input class="form-input postal-input" name="nom">
+                        </div>
+                        <div>
+                            <label class="form-label-maison">Prenom</label>
+                            <input class="form-input ville-input" name="prenom">
+                    
+                        </div>
+                    </div>
+                    <div class="postal-ville-wrapper">
+                            <div>
+                                <label class="form-label-maison">Telephone<sup>*</sup></label>
+                                <input class="form-input postal-input-tele" required name="telephone">
+                            </div>
+                            <div>
+                                <label class="form-label-maison">Email</label>
+                                <input type="email" class="form-input ville-input" name="email">
+                        
+                            </div>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="form-footer-container">
+                    <div class="form-footer-wrapper">
+                        <div class="router-wrapper" onclick="myFunction('terrian')">
+                            <span class="back-arrow"><i class="fas fa-arrow-alt-left"></i></span>
+                            <span class="back-arrow-text">Retuor</span>
+                        </div>
+                        <div class="submit-btn">
+                            <input  class="submit-btn" type="submit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
                         </div>
                     </div>
                     <div class="left-area-container">
