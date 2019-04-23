@@ -16,21 +16,24 @@ function myFunction(variab) {
   $('#'+variab+'-menu').addClass('active-border')
   $('#'+variab+'-tick').css("visibility", "visible")
 }
-
-$("#idForm").submit(function(e) {
+$(function () {
+$("form").submit(function(e) {
 
     e.preventDefault(); // avoid to execute the actual submit of the form.
 
     var form = $(this);
+    console.log(form);
     var url = form.attr('action');
 
     $.ajax({
            type: "POST",
-           url: url,
+           url: 'form_submit.php',
            data: form.serialize(), // serializes the form's elements.
            success: function(data)
            {
-               alert(data); // show response from the php script.
+               //alert(data); // show response from the php script.
+               myFunction('submitsuccess')
            }
          });
         });
+    });
