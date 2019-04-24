@@ -186,8 +186,29 @@ input.submit-btn {
     color: #5bd45b;
 
 }
-.success-tick {display: flex;
-justify-content: center;
+input.submit-last {
+    width: 13rem;
+    font-size: 0.8rem;
+}
+.input-wrapper-submit-last {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+.fotter-para-one {
+    width: 12rem;
+    text-align: center;
+    font-weight: 600;
+    margin: 3rem 0 0.7rem;
+}
+.fotter-para-two {
+    width: 26rem;
+    text-align: center;
+    margin: 0;
+}
+.success-tick {
+    display: flex;
+    justify-content: center;
 }
 .display-hide {
     display: none
