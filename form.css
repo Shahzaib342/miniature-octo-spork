@@ -5,7 +5,6 @@ body {
     width: 100%;
 }
 .main-wrapper {
-    max-width: 86rem;
     margin: auto;
 }
 .wrapper-form-area {
@@ -21,6 +20,7 @@ body {
 }
 .left-area-container {
     background: #d1d1d1;
+    min-height: 92%;
     width: 37%
 }
 
@@ -179,6 +179,7 @@ input.submit-btn {
     justify-content: center;
     box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3);
     margin-left: 0;
+    height: 27rem;
 }
 .fa-check-circle{
     border-radius: 11rem;
@@ -209,6 +210,67 @@ input.submit-last {
 .success-tick {
     display: flex;
     justify-content: center;
+    padding-top: 3rem;
+}
+.hr-progress{
+    width: 30%;
+    color: yellow;
+    height: 5px;
+    background: #ffff0f;
+    border-style: double;
+    margin-inline-start: unset;
+    margin-inline-end: unset;
+    margin: unset;
+}
+.progress-bar-wrapper{
+    display: flex
+}
+.hr-progress-left{
+    width: 30%;
+    color: #284a70;
+    background: #284a70;
+}
+.hr-progress-right{
+    width: 70%;
+    color: #bbbbbb;
+    background: #bbbbbb;
+}
+.nav-bar-wrapper {
+    display: flex;
+    align-items: baseline;
+    margin: 1rem 0;
+}
+.left-text-home {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.right-text-home{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #284a70;
+}
+.step-two-text {
+    font-weight: 600;
+}
+.nav-bar-logo {
+    margin: 0 3rem 0 1rem;
+}
+.success-text-one {
+    text-align: center;
+    font-size: 2.3rem;
+    color: #284a70;
+    margin: 1rem 0 0.5rem;
+}
+.success-text-two {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #2869a8;
+}
+.success-text-three {
+    text-align: center;
+    font-weight: 600;
+    color: #284a70;
+    margin: 4rem 0 2rem;
 }
 .display-hide {
     display: none

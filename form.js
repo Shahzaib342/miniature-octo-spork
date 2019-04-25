@@ -32,7 +32,10 @@ $("form").submit(function(e) {
            success: function(data)
            {
                //alert(data); // show response from the php script.
+               $('.icon-header-container').addClass('display-hide')
+               $('.icon-body-conatiner').addClass('display-hide')
                myFunction('submitsuccess')
+               
            }
          });
         });

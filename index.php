@@ -10,6 +10,19 @@
 
 <div class="main-container">
     <div class="main-wrapper">
+        <div class="nav-bar-wrapper">
+            <div class="nav-bar-logo">
+                <span class="left-text-home">Meilleurs</span>
+                <span class="right-text-home">Agents</span>
+            </div>
+            <div class="nav-bar-step">
+                <span class="step-two-text">Etape 2 : A propos de ce bien</span>
+            </div>
+        </div>
+        <div class="progress-bar-wrapper">
+            <hr class="hr-progress hr-progress-left">
+            <hr class="hr-progress hr-progress-right">
+        </div>
         <div class="icon-container">
             <div class="icon-wrapper wrapper-form-area">
                 <div class="right-area-container">
