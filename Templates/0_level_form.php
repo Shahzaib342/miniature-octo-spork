@@ -7,17 +7,17 @@
             <div class="postal-ville-wrapper">
                 <div>
                     <div class="label-wrapper"><label class="form-label">Code Postal</label></div>
-                    <div class="input-wrapper"><input class="form-input postal-input" name="postal"></div>
+                    <div class="input-wrapper"><input class="form-input postal-input required" name="postal"></div>
                 </div>
                 <div>
                     <div class="label-wrapper"><label class="form-label">Ville</label></div>
-                    <div class="input-wrapper"><input class="form-input ville-input" name="ville"></div>
+                    <div class="input-wrapper"><input class="form-input ville-input required" name="ville"></div>
 
                 </div>
             </div>
             <div class="address-wrapper">
                 <div class="label-wrapper"><label class="form-label">Adresse</label></div>
-                <div class="input-wrapper"><input class="form-input adresse-input" name="address"></div>
+                <div class="input-wrapper"><input class="form-input adresse-input required" name="address"></div>
             </div>
         </div>
         <hr>

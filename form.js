@@ -38,6 +38,20 @@ function selectMenu(variab) {
 
 function goToNext(variab) {
 
+    var errors = [];
+    $('form').find('.error').remove();
+    $( "#home-form input.required" ).each(function( index ) {
+        console.log(index);
+        if (!$(this).val()) {
+            $(this).parent().parent().find('label').append('<span class="error"> This field is required</span>');
+            errors.push(index+1);
+        }
+    });
+    if(errors.length > 0)
+        return;
+
+
+
     var formsName = $('.form-container');
     formsName.removeClass('display-show')
     formsName.addClass('display-hide')

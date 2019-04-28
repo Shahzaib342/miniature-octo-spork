@@ -346,3 +346,6 @@ input.submit-last {
 .decrement-num {
     width: 20.8%;
 }
+.error {
+    color: red;
+}
