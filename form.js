@@ -2,8 +2,7 @@
 
 
 function myFunction(variab) {
-  //alert(variab);
-  //console.log(formsName.addClass('display-hide'))
+
   var formsName = $('.form-container');
   var activeMenue = $('.icon-body-wrapper');
   
@@ -18,20 +17,15 @@ function myFunction(variab) {
 }
 
 function selectMenu(variab) {
-    //alert(variab);
-    //console.log(formsName.addClass('display-hide'))
-    //var formsName = $('.form-container');
+
     localStorage.setItem("selectedmenu", variab);
     $( "#goto-next" ).prop( "disabled", false );
     $( "#goto-next" ).removeClass('disable-btn')
     var activeMenue = $('.icon-body-wrapper');
 
-    //formsName.removeClass('display-show')
     activeMenue.removeClass('active-border')
     $(".fa-check").css("visibility", "hidden")
 
-    //formsName.addClass('display-hide')
-    //$('#'+variab+'-form').addClass('display-show')
     $('#'+variab+'-menu').addClass('active-border')
     $('#'+variab+'-tick').css("visibility", "visible")
 }
@@ -46,6 +40,7 @@ function goToNext(variab) {
     if(variab == 'last') {
         progressBar(75, 25)
         $('#'+variab+'-form').addClass('display-show')
+        $('#selected-menu').val(localStorage.getItem("selectedmenu"));
 
     } else {
         progressBar(50, 50)
@@ -116,8 +111,6 @@ $("form").submit(function(e) {
     e.preventDefault(); // avoid to execute the actual submit of the form.
 
     var form = $(this);
-    console.log(form);
-    var url = form.attr('action');
 
     $.ajax({
            type: "POST",

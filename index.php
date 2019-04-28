@@ -80,6 +80,7 @@
 
                         </div>
                         <form action="">
+                            <input id="selected-menu" class="selected-menu" type="hidden" name="selected-menu">
                             <!-- 0 level form  -->
                             <?php include "Templates/0_level_form.php"; ?>
 
