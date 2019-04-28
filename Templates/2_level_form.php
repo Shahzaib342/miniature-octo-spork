@@ -1,4 +1,4 @@
-<div class="form-container display-hide" id="appart-form">
+<div class="form-container three-menu-container display-hide" id="appart-form">
     <div class="form-wrapper">
         <div class="form-header-wrapper">
             <span>Informations principales du bien</span>
@@ -8,29 +8,29 @@
                 <div class="appart-group-one">
                     <div class="label-wrapper-maison">
                         <label class="form-label-maison">Surface Carrez</label>
-                        <input class="form-input-maison" name="careez"> <span class="m-square">m<sup>2</sup></span>
+                        <input class="form-input-maison appart-form-input" name="careez"> <span class="m-square">m<sup>2</sup></span>
                     </div>
                     <div class="label-wrapper-maison">
                         <label class="form-label-maison">Nombre de pieces</label>
-                        <input class="form-input-maison" name="dePieces">
+                        <input class="form-input-maison appart-form-input" name="dePieces">
                     </div>
                     <div class="label-wrapper-maison">
                         <label class="form-label-maison">Nombre de saller de bain</label>
-                        <input class="form-input-maison" name="bain">
+                        <input class="form-input-maison appart-form-input" name="bain">
                     </div>
                     <div class="label-wrapper-maison">
                         <label class="form-label-maison">Etage de ce bienn</label>
-                        <input class="form-input-maison" name="bien">
+                        <input class="form-input-maison appart-form-input" name="bien">
                     </div>
 
                 </div>
                 <div class="appart-group-two">
-                    <div class="check-box-maison"><input type="checkbox" name="appartments[]"><label>Ascenseur</label></div>
-                    <div class="check-box-maison"><input type="checkbox" name="appartments[]"><label>Balcon</label></div>
+                    <div class="check-box-maison"><input class="appart-form-checkbox" type="checkbox" name="appartments[]"><label>Ascenseur</label></div>
+                    <div class="check-box-maison"><input class="appart-form-checkbox" type="checkbox" name="appartments[]"><label>Balcon</label></div>
                 </div>
                 <div class="appart-group-three">
-                    <div class="check-box-maison"><input type="checkbox" name="appartments[]"><label>Cave</label></div>
-                    <div class="check-box-maison"><input type="checkbox" name="appartments[]"><label>pieaces de parking</label></div>
+                    <div class="check-box-maison"><input class="appart-form-checkbox" type="checkbox" name="appartments[]"><label>Cave</label></div>
+                    <div class="check-box-maison"><input class="appart-form-checkbox" type="checkbox" name="appartments[]"><label>pieaces de parking</label></div>
 
                 </div>
             </div>
@@ -41,10 +41,10 @@
             <div class="form-footer-wrapper">
                 <div class="router-wrapper">
                     <span class="back-arrow"><i class="fas fa-arrow-alt-left"></i></span>
-                    <span class="back-arrow-text" onclick="myFunction('maison')">Retuor</span>
+                    <span class="back-arrow-text" onclick="retuor('home')">Retuor</span>
                 </div>
                 <div class="submit-btn">
-                    <input class="submit-btn" onclick="myFunction('terrian')" value="submit">
+                    <input class="submit-btn" onclick="goToNext('last')" value="submit">
                 </div>
             </div>
         </div>
