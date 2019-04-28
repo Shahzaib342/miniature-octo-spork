@@ -22,7 +22,7 @@
         <div class="form-footer-container">
             <div class="form-footer-wrapper">
                 <div class="router-wrapper" onclick="myFunction('appart')">
-                    <span class="back-arrow"></span>
+                    <span class="back-arrow">←</span>
                     <span class="back-arrow-text">Retuor</span>
                 </div>
                 <div class="submit-btn">

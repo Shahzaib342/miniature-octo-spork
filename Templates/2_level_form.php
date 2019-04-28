@@ -8,29 +8,55 @@
                 <div class="appart-group-one">
                     <div class="label-wrapper-maison">
                         <label class="form-label-maison">Surface Carrez</label>
-                        <input class="form-input-maison" name="careez"> <span class="m-square">m<sup>2</sup></span>
+                        <div class="field-container">
+                            <div class="field--postfix field field--invalid">
+                                <input class="form-input-maison" name="careez">
+                                <span class="field__postfix">m²</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="label-wrapper-maison">
                         <label class="form-label-maison">Nombre de pieces</label>
-                        <input class="form-input-maison" name="dePieces">
+                        <div class="field-container">
+                            <div class="field--postfix field field--invalid">
+                                <input class="form-input-maison-num" name="dePieces">
+                                <a class="increment-num">+</a>
+                                <a class="decrement-num">-</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="label-wrapper-maison">
                         <label class="form-label-maison">Nombre de saller de bain</label>
-                        <input class="form-input-maison" name="bain">
+                        <div class="field-container">
+                            <div class="field--postfix field field--invalid">
+                                <input class="form-input-maison-num" name="bain">
+                                <a class="increment-num">+</a>
+                                <a class="decrement-num">-</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="label-wrapper-maison">
                         <label class="form-label-maison">Etage de ce bienn</label>
-                        <input class="form-input-maison" name="bien">
+                        <div class="field-container">
+                            <div class="field--postfix field field--invalid">
+                                <input class="form-input-maison-num" name="bien">
+                                <a class="increment-num">+</a>
+                                <a class="decrement-num">-</a>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
                 <div class="appart-group-two">
-                    <div class="check-box-maison"><input type="checkbox" name="appartments[]"><label>Ascenseur</label></div>
-                    <div class="check-box-maison"><input type="checkbox" name="appartments[]"><label>Balcon</label></div>
+                    <div class="check-box-maison"><input type="checkbox" name="appartments[]"><label>Ascenseur</label>
+                    </div>
+                    <div class="check-box-maison"><input type="checkbox" name="appartments[]"><label>Balcon</label>
+                    </div>
                 </div>
                 <div class="appart-group-three">
                     <div class="check-box-maison"><input type="checkbox" name="appartments[]"><label>Cave</label></div>
-                    <div class="check-box-maison"><input type="checkbox" name="appartments[]"><label>pieaces de parking</label></div>
+                    <div class="check-box-maison"><input type="checkbox" name="appartments[]"><label>pieaces de
+                            parking</label></div>
 
                 </div>
             </div>
@@ -40,7 +66,7 @@
         <div class="form-footer-container">
             <div class="form-footer-wrapper">
                 <div class="router-wrapper">
-                    <span class="back-arrow"><i class="fas fa-arrow-alt-left"></i></span>
+                    <span class="back-arrow">←</span>
                     <span class="back-arrow-text" onclick="myFunction('maison')">Retuor</span>
                 </div>
                 <div class="submit-btn">

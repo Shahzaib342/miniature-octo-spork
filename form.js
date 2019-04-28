@@ -32,11 +32,28 @@ $("form").submit(function(e) {
            success: function(data)
            {
                //alert(data); // show response from the php script.
-               $('.icon-header-container').addClass('display-hide')
-               $('.icon-body-conatiner').addClass('display-hide')
+               $('.icon-header-container').addClass('display-hide');
+               $('.icon-body-conatiner').addClass('display-hide');
                myFunction('submitsuccess')
                
            }
          });
         });
+        $('a.increment-num').click(function() {
+            var parent = $(this).parent().find('input').val();
+            if (parent == '')
+                $(this).parent().find('input').val(1);
+            else {
+                parent = parseInt(parent) + 1;
+                $(this).parent().find('input').val(parseInt(parent));
+            }
+        });
+        $('a.decrement-num').click(function() {
+            var parent = $(this).parent().find('input').val();
+            if (parent != '' && parseInt(parent) > 0) {
+                parent = parseInt(parent) - 1;
+                $(this).parent().find('input').val(parseInt(parent));
+            }
+        });
     });
+
