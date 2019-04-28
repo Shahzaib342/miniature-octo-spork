@@ -54,7 +54,7 @@
                         <label class="form-label-maison">Nombre de niveaux</label>
                         <div class="field-container">
                             <div class="field--postfix field field--invalid">
-                                <input class="form-input-maison-num" name="niveax">
+                                <input class="form-input-maison-num maison-form-input" name="niveax">
                                 <a class="increment-num">+</a>
                                 <a class="decrement-num">-</a>
                             </div>
