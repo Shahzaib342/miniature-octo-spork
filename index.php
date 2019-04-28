@@ -20,8 +20,8 @@
             </div>
         </div>
         <div class="progress-bar-wrapper">
-            <hr class="hr-progress hr-progress-left">
-            <hr class="hr-progress hr-progress-right">
+            <hr id="hr-progress-left" class="hr-progress hr-progress-left">
+            <hr id="hr-progress-right" class="hr-progress hr-progress-right">
         </div>
         <div class="icon-container">
             <div class="icon-wrapper wrapper-form-area">
@@ -33,7 +33,7 @@
                             De quel type de bien s'agit-ill?
                         </div>
                         <div class="icon-body-conatiner">
-                            <div class="icon-body-wrapper" id="maison-menu" onclick="myFunction('maison')">
+                            <div class="icon-body-wrapper" id="maison-menu" onclick="selectMenu('maison')">
                                 <div class="tick">
                                     <i class="fas fa-check" id="maison-tick" style="visibility: hidden"></i>
                                 </div>
@@ -47,7 +47,7 @@
                                 </div>
                             </div>
 
-                            <div class="icon-body-wrapper" id="appart-menu" onclick="myFunction('appart')">
+                            <div class="icon-body-wrapper" id="appart-menu" onclick="selectMenu('appart')">
                                 <div class="tick tick-appartment">
                                     <i class="fas fa-check" id="appart-tick" style="visibility:hidden"></i>
                                 </div>
@@ -63,7 +63,7 @@
                             </div>
 
 
-                            <div class="icon-body-wrapper" id="terrian-menu" onclick="myFunction('terrian')">
+                            <div class="icon-body-wrapper" id="terrian-menu" onclick="selectMenu('terrian')">
                                 <div class="tick">
                                     <i class="fas fa-check" id="terrian-tick" style="visibility:hidden"></i>
                                 </div>

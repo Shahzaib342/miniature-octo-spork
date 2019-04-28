@@ -28,7 +28,7 @@
                     <span class="back-arrow-text"></span>
                 </div>
                 <div class="submit-btn">
-                    <input class="submit-btn" onclick="myFunction('maison')" value="submit">
+                    <input id="goto-next"class="submit-btn disable" onclick="goToNext('maison')" value="next">
                 </div>
             </div>
         </div>

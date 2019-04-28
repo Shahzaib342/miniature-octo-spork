@@ -1,5 +1,6 @@
 body {
-    font-family: sans-serif
+    font-family: sans-serif;
+    margin: 0px
 }
 .main-container {
     width: 100%;
@@ -166,9 +167,10 @@ hr {
 .fa-check{
     margin-right: 0.8rem;
 }
-input.submit-btn {
+.submit-btn {
     color: white;
     background: #284a70;
+    cursor: pointer;
     width: 7rem;
     height: 2.5rem;
     font-size: inherit;
@@ -228,12 +230,12 @@ input.submit-last {
     display: flex
 }
 .hr-progress-left{
-    width: 30%;
+    width: 25%;
     color: #284a70;
     background: #284a70;
 }
 .hr-progress-right{
-    width: 70%;
+    width: 75%;
     color: #bbbbbb;
     background: #bbbbbb;
 }
@@ -289,6 +291,15 @@ input.submit-last {
 .active-border{
     border: 0.05rem #284a70 solid;
     border-bottom: 0.5rem #284a70 solid;
+}
+.active-btn {
+    background: #284a70;
+    cursor: pointer
+}
+.disable-btn {
+    background: #b3b3b3;
+    cursor: no-drop
+
 }
 .field--invalid {
     border: 1px solid #284a70;

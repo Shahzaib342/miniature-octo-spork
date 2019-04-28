@@ -10,7 +10,7 @@
                         <label class="form-label-maison">Surface habitable</label>
                         <div class="field-container">
                             <div class="field--postfix field field--invalid">
-                                <input class="form-input-maison" name="habitable">
+                                <input class="form-input-maison maison-form-input" name="habitable">
                                 <span class="field__postfix">m²</span>
                             </div>
                         </div>
@@ -20,7 +20,7 @@
                         <div class="field-container">
                             <div class="field--postfix field field--invalid">
                                 <!--                            <span class="m-square">m<sup>2</sup></span>-->
-                                <input class="form-input-maison" name="terrain">
+                                <input class="form-input-maison maison-form-input" name="terrain">
                                 <span class="field__postfix">m²</span>
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                         <label class="form-label-maison">Nombre de pieces</label>
                         <div class="field-container">
                             <div class="field--postfix field field--invalid">
-                                <input class="form-input-maison-num" name="nombreDe">
+                                <input class="form-input-maison-num maison-form-input" name="nombreDe">
                                 <a class="increment-num">+</a>
                                 <a class="decrement-num">-</a>
                             </div>
@@ -43,7 +43,7 @@
                         <label class="form-label-maison">Nombre de salles de bain</label>
                         <div class="field-container">
                             <div class="field--postfix field field--invalid">
-                                <input class="form-input-maison-num" name="deBain">
+                                <input class="form-input-maison-num maison-form-input" name="deBain">
                                 <a class="increment-num">+</a>
                                 <a class="decrement-num">-</a>
 
@@ -62,12 +62,9 @@
                     </div>
                 </div>
                 <div class="maison-group-three">
-                    <div class="check-box-maison"><input type="checkbox" name="maisonGroup[]"><label>Murs
-                            mitoyens</label></div>
-                    <div class="check-box-maison"><input type="checkbox" name="maisonGroup[]"><label>Sous-sol</label>
-                    </div>
-                    <div class="check-box-maison"><input type="checkbox" name="maisonGroup[]"><label>pieaces de</label>
-                    </div>
+                    <div class="check-box-maison"><input class="maison-form-checkbox" type="checkbox" name="maisonGroup[]"><label>Murs mitoyens</label></div>
+                    <div class="check-box-maison"><input class="maison-form-checkbox" type="checkbox" name="maisonGroup[]"><label>Sous-sol</label></div>
+                    <div class="check-box-maison"><input class="maison-form-checkbox" type="checkbox" name="maisonGroup[]"><label>pieaces de</label></div>
 
                 </div>
             </div>
@@ -76,12 +73,12 @@
         <hr>
         <div class="form-footer-container">
             <div class="form-footer-wrapper">
-                <div class="router-wrapper" onclick="myFunction('home')">
+                <div class="router-wrapper" onclick="retuor('home')">
                     <span class="back-arrow">←</span>
                     <span class="back-arrow-text">Retuor</span>
                 </div>
                 <div class="submit-btn">
-                    <input class="submit-btn" onclick="myFunction('appart')" value="submit">
+                    <input class="submit-btn" onclick="goToNext('last')" value="submit">
                 </div>
             </div>
         </div>
