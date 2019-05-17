@@ -17,7 +17,7 @@ body {
     width: 20%
 }
 .middle-area-container {
-    width: 43%
+    width: 46%
 }
 .left-area-container {
     background: #d1d1d1;
@@ -86,7 +86,7 @@ body {
     height: 10rem;
     width: 15.5rem;
     background: white;
-    margin: 3rem 0 0 2rem;
+    margin: 3rem 0 0 7rem;
 }
 .information-box-wrapper {
     padding: 1rem;
@@ -103,15 +103,27 @@ body {
     justify-content: space-between;
 }
 .form-input {
-    border-color: #284a70;
-    height: 1.7rem;
-    border-style: double;
+    /*border-color: #284a70;*/
+    height: 2.7rem;
+    /*border-style: double;*/
 }
 .postal-input {
-    width: 70%;
+    width: 111%;
 }
 .postal-input-tele {
-    width: 50%;
+    width: 120%;
+}
+.prenom-input {
+    width: 109%;
+    margin-left: 20px;
+}
+.email-input {
+    margin-left: 43px;
+    width: 98%;
+}
+.name-input {
+    margin-left: 38px;
+    width: 100%;
 }
 .adresse-input {
     width: 60%;
@@ -131,8 +143,20 @@ body {
 .label-wrapper {
     margin-bottom: 0.5rem;
 }
-hr {
-    margin-top: 1.5rem;
+label {
+    color: #4a4a4a;
+    display: inline;
+    font-family: Roboto,sans-serif;
+    font-size: 1.133333333rem;
+    line-height: 1.6rem;
+    vertical-align: middle;
+    word-break: break-word;
+}
+.auto-input-fields {
+    margin: auto;
+}
+hr {.field__postfix
+margin-top: 1.5rem;
     margin-bottom: 2rem;
 }
 .form-footer-wrapper {
@@ -144,11 +168,11 @@ hr {
     margin-top: 1.5rem;
 }
 .form-input-maison {
-    width: 74%;
+    width: 75%;
     height: 2rem;
 }
 .form-input-maison-num {
-    width: 58%;
+    width: 59.2%;
     height: 2rem;
     text-align: center;
 }
@@ -161,9 +185,9 @@ hr {
 .maison-group-two {
     /*margin-top: 6rem;*/
 }
-.appart-group-two {
-    margin-bottom: 2rem;
-}
+/*.appart-group-two {*/
+/*margin-bottom: 2rem;*/
+/*}*/
 .fa-check{
     margin-right: 0.8rem;
 }
@@ -194,6 +218,9 @@ hr {
 input.submit-last {
     width: 13rem;
     font-size: 0.8rem;
+}
+.OBTENIER-MON-ESTIMATION {
+    margin: auto;
 }
 .input-wrapper-submit-last {
     justify-content: center;
@@ -231,8 +258,8 @@ input.submit-last {
 }
 .hr-progress-left{
     width: 25%;
-    color: #284a70;
-    background: #284a70;
+    color: #4aa7ff;
+    background: linear-gradient(270deg,#4aa7ff,#0074e4);
 }
 .hr-progress-right{
     width: 75%;
@@ -241,8 +268,12 @@ input.submit-last {
 }
 .nav-bar-wrapper {
     display: flex;
-    align-items: baseline;
-    margin: 1rem 0;
+    align-items: center;
+    /*margin: 1.4rem 0 1rem 0;*/
+}
+.terrian-form-input {
+    width: 100%;
+    height: 2.7rem;
 }
 .left-text-home {
     font-size: 1.4rem;
@@ -254,7 +285,8 @@ input.submit-last {
     color: #284a70;
 }
 .step-two-text {
-    font-weight: 600;
+    font-family: Montserrat,sans-serif;
+    font-weight: 500;
 }
 .nav-bar-logo {
     margin: 0 3rem 0 1rem;
@@ -309,7 +341,7 @@ input.submit-last {
     height: 2rem;
     display: block;
     float: right;
-    width: 25%;
+    width: 24%;
     text-align: center;
     border-left: 1px solid #e2e2e2;
     border-radius: 0 .133333333rem .133333333rem 0;
@@ -344,8 +376,90 @@ input.submit-last {
 }
 
 .decrement-num {
-    width: 20.8%;
+    width: 18.8%;
 }
 .error {
     color: red;
+}
+
+.m2-errors {
+    color: #ff5858;
+    display: block;
+    font-size: .866666667rem;
+    margin: 0;
+    padding: .266666667rem 0 .533333333rem;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 35px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.maison-group-three, .appart-group-two {
+    margin-top: 30px;
+    margin-bottom: 20px;
 }

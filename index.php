@@ -12,11 +12,12 @@
     <div class="main-wrapper">
         <div class="nav-bar-wrapper">
             <div class="nav-bar-logo">
-                <span class="left-text-home">Meilleurs</span>
-                <span class="right-text-home">Agents</span>
+                <img src="assets/logo.png" width="200">
+                <!--                <span class="left-text-home">Meilleurs</span>-->
+                <!--                <span class="right-text-home">Agents</span>-->
             </div>
             <div class="nav-bar-step">
-                <span class="step-two-text">Etape 2 : A propos de ce bien</span>
+                <span class="step-two-text">Étape 1 : Adresse du bien</span>
             </div>
         </div>
         <div class="progress-bar-wrapper">
@@ -30,7 +31,7 @@
                 <div class="middle-area-container">
                     <div class="middle-area-wrapper">
                         <div class="icon-header-container">
-                            De quel type de bien s'agit-ill?
+                            De quel type de bien s'agit-il ?
                         </div>
                         <div class="icon-body-conatiner">
                             <div class="icon-body-wrapper" id="maison-menu" onclick="selectMenu('maison')">
@@ -56,7 +57,7 @@
                                         <i class="fas fa-home fa-2x icon-color"></i>
                                     </div>
                                     <div class="icon-name">
-                                        APPARTMENT
+                                        APPARTEMENT
                                     </div>
                                 </div>
 
@@ -72,7 +73,7 @@
                                         <i class="fas fa-home fa-2x icon-color"></i>
                                     </div>
                                     <div class="icon-name">
-                                        TERRIAN
+                                        TERRAIN
                                     </div>
                                 </div>
 

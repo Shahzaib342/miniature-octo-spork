@@ -3,17 +3,17 @@
 
 function myFunction(variab) {
 
-  var formsName = $('.form-container');
-  var activeMenue = $('.icon-body-wrapper');
-  
-  formsName.removeClass('display-show')
-  activeMenue.removeClass('active-border')
-  $(".fa-check").css("visibility", "hidden")
-  
-  formsName.addClass('display-hide')
-  $('#'+variab+'-form').addClass('display-show')
-  $('#'+variab+'-menu').addClass('active-border')
-  $('#'+variab+'-tick').css("visibility", "visible")
+    var formsName = $('.form-container');
+    var activeMenue = $('.icon-body-wrapper');
+
+    formsName.removeClass('display-show')
+    activeMenue.removeClass('active-border')
+    $(".fa-check").css("visibility", "hidden")
+
+    formsName.addClass('display-hide')
+    $('#'+variab+'-form').addClass('display-show')
+    $('#'+variab+'-menu').addClass('active-border')
+    $('#'+variab+'-tick').css("visibility", "visible")
 }
 
 function selectMenu(variab) {
@@ -37,14 +37,27 @@ function goToNext(variab) {
     $( "#home-form input.required" ).each(function( index ) {
         console.log(index);
         if (!$(this).val()) {
-            $(this).parent().parent().find('label').append('<span class="error"> This field is required</span>');
+            $(this).parent().parent().find('label').append('<span class="error"> Ce champs est requis</span>');
             errors.push(index+1);
         }
     });
+
+    $( ".habitable-required" ).each(function( index ) {
+        if($(this).is(':visible') && !$(this).val()) {
+            $(this).parent().parent().find('.m2-errors').remove();
+            $(this).parent().css('border','1px solid red');
+            $(this).parent().after('<span class="m2-errors">Ce champ est requis</span>');
+            errors.push(index+1)
+        }
+        else {
+            $(this).parent().parent().find('.m2-errors').remove();
+            $(this).parent().css('border','1px solid #284a70');
+        }
+    });
+
+
     if(errors.length > 0)
         return;
-
-
 
     var formsName = $('.form-container');
     formsName.removeClass('display-show')
@@ -55,12 +68,14 @@ function goToNext(variab) {
         progressBar(75, 25)
         $('#'+variab+'-form').addClass('display-show')
         $('#selected-menu').val(localStorage.getItem("selectedmenu"));
+        $('.step-two-text').text('Étape 3 : Découvrez votre estimation');
 
     } else {
         progressBar(50, 50)
         variab = localStorage.getItem("selectedmenu");
-        resetFormValues(variab)
-        $('#'+variab+'-form').addClass('display-show')
+        resetFormValues(variab);
+        $('#'+variab+'-form').addClass('display-show');
+        $('.step-two-text').text('Étape 2 : À propos de ce bien');
     }
 }
 function resetFormValues(variab) {
@@ -120,26 +135,27 @@ function retuor(variab) {
 $(function () {
     $( "#goto-next" ).prop( "disabled", true );
     $( "#goto-next" ).addClass('disable-btn')
-$("form").submit(function(e) {
+    $("form").submit(function(e) {
 
-    e.preventDefault(); // avoid to execute the actual submit of the form.
+        e.preventDefault(); // avoid to execute the actual submit of the form.
 
-    var form = $(this);
+        var form = $(this);
 
-    $.ajax({
-           type: "POST",
-           url: 'form_submit.php',
-           data: form.serialize(), // serializes the form's elements.
-           success: function(data)
-           {
-               //alert(data); // show response from the php script.
-            hideMenu();
-            progressBar(100, 0)
-            myFunction('submitsuccess')
-               
-           }
-         });
+        $.ajax({
+            type: "POST",
+            url: '/form_submit.php',
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                //alert(data); // show response from the php script.
+                hideMenu();
+                progressBar(100, 0)
+                myFunction('submitsuccess')
+
+            }
         });
+    });
+
     $('a.increment-num').click(function() {
         var parent = $(this).parent().find('input').val();
         if (parent == '')
@@ -149,6 +165,7 @@ $("form").submit(function(e) {
             $(this).parent().find('input').val(parseInt(parent));
         }
     });
+
     $('a.decrement-num').click(function() {
         var parent = $(this).parent().find('input').val();
         if (parent != '' && parseInt(parent) > 0) {
@@ -156,5 +173,19 @@ $("form").submit(function(e) {
             $(this).parent().find('input').val(parseInt(parent));
         }
     });
+
+    $('.habitable-required').focusout(function(){
+        if($(this).is(':visible') && !$(this).val()) {
+            $(this).parent().parent().find('.m2-errors').remove();
+            $(this).parent().css('border','1px solid red');
+            $(this).parent().after('<span class="m2-errors">Ce champ est requis</span>');
+            errors.push(index+1)
+        }
+        else {
+            $(this).parent().parent().find('.m2-errors').remove();
+            $(this).parent().css('border','1px solid #284a70');
+        }
     });
+});
+
 

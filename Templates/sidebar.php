@@ -11,7 +11,7 @@
                                         </span>
                 </div>
                 <div class="info-header-body">
-                    <span class="info-header-text">Monis de 2 miutes suffisent pour obtenir I'estimation personnalisee de votre bien </span>
+                    <span class="info-header-text">Moins de 2 minutes suffisent pour obtenir I'estimation personnalisée de votre bien </span>
                 </div>
             </div>
         </div>

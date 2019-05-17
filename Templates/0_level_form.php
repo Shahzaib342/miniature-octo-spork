@@ -1,7 +1,7 @@
 <div class="form-container" id="home-form">
     <div class="form-wrapper">
         <div class="form-header-wrapper">
-            <span>Renseignez I'adresse a estimer</span>
+            <span>Renseignez l'adresse à estimer</span>
         </div>
         <div class="form-body-wrapper">
             <div class="postal-ville-wrapper">
@@ -28,7 +28,7 @@
                     <span class="back-arrow-text"></span>
                 </div>
                 <div class="submit-btn">
-                    <input id="goto-next"class="submit-btn disable" onclick="goToNext('maison')" value="next">
+                    <input id="goto-next"class="submit-btn disable" onclick="goToNext('maison')" value="Suivant">
                 </div>
             </div>
         </div>
